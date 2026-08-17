@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Big Brothers Corniks | Proudly Made in Isabela</title>
-  <meta name="description"
-        content="Big Brothers Corniks by 3 Sher's Food Products. Proudly made in Cauayan City, Isabela since 1989. Explore Classic Cheese, Spicy, and Garlic with Chips.">
+
+  <meta
+    name="description"
+    content="Big Brothers Corniks by 3 Sher's Food Products. Proudly made in Cauayan City, Isabela since 1989. Explore Classic Cheese, Spicy, and Garlic with Chips."
+  >
 
   <style>
     :root{
@@ -152,15 +155,27 @@
     }
 
     /* HERO */
+
     .hero{
       position:relative;
       min-height:82vh;
       display:flex;
       align-items:center;
       overflow:hidden;
+
       background:
-        radial-gradient(circle at 80% 30%, rgba(255,201,40,.45), transparent 30%),
-        linear-gradient(130deg,#3a2418 0%,#7b371e 45%,#d86c29 100%);
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(255,201,40,.45),
+          transparent 30%
+        ),
+        linear-gradient(
+          130deg,
+          #3a2418 0%,
+          #7b371e 45%,
+          #d86c29 100%
+        );
+
       color:white;
     }
 
@@ -168,10 +183,16 @@
       content:"";
       position:absolute;
       inset:0;
+
       background:
-        linear-gradient(90deg,rgba(36,19,10,.72),rgba(36,19,10,.18)),
-        url("assets/hero-products.jpg") center/cover no-repeat;
-      opacity:.72;
+        linear-gradient(
+          90deg,
+          rgba(36,19,10,.76),
+          rgba(36,19,10,.28)
+        ),
+        url("assets/550g-flavors-group.jpg") center/cover no-repeat;
+
+      opacity:.78;
     }
 
     .hero-content{
@@ -258,6 +279,7 @@
     }
 
     /* FLAVORS */
+
     .flavors{
       background:var(--cream);
     }
@@ -299,6 +321,7 @@
     }
 
     .flavor-card img{
+      width:100%;
       height:315px;
       object-fit:contain;
       filter:drop-shadow(0 18px 18px rgba(0,0,0,.15));
@@ -326,6 +349,7 @@
     }
 
     /* SIZE CARDS */
+
     .size-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -353,6 +377,7 @@
     }
 
     /* COMPARISON */
+
     .comparison{
       background:var(--brown);
       color:white;
@@ -393,6 +418,7 @@
     }
 
     /* NUTRITION */
+
     .nutrition{
       background:#fff;
     }
@@ -452,6 +478,7 @@
     }
 
     /* STORY */
+
     .story{
       background:var(--cream);
     }
@@ -466,6 +493,7 @@
     .story-image{
       border-radius:30px;
       min-height:540px;
+      height:540px;
       width:100%;
       object-fit:cover;
       box-shadow:var(--shadow);
@@ -487,6 +515,7 @@
     }
 
     /* PROCESS */
+
     .process-grid{
       display:grid;
       grid-template-columns:repeat(6,1fr);
@@ -517,6 +546,7 @@
     }
 
     /* QUALITY */
+
     .quality{
       background:#f8eee0;
     }
@@ -540,6 +570,7 @@
     }
 
     /* BUY */
+
     .buy{
       background:linear-gradient(135deg,var(--blue),#123a74);
       color:white;
@@ -574,6 +605,7 @@
     }
 
     /* CONTACT */
+
     .contact-grid{
       display:grid;
       grid-template-columns:.8fr 1.2fr;
@@ -605,6 +637,7 @@
     }
 
     /* FOOTER */
+
     footer{
       background:#21150f;
       color:#e9d9c8;
@@ -635,6 +668,8 @@
       font-size:.86rem;
     }
 
+    /* ANIMATION */
+
     .reveal{
       opacity:0;
       transform:translateY(30px);
@@ -646,7 +681,10 @@
       transform:none;
     }
 
+    /* TABLET */
+
     @media(max-width:950px){
+
       nav{
         display:none;
         position:absolute;
@@ -665,6 +703,10 @@
 
       .mobile-menu{
         display:block;
+      }
+
+      .desktop-buy{
+        display:none;
       }
 
       .flavor-grid,
@@ -686,9 +728,17 @@
       .quality-grid{
         grid-template-columns:repeat(2,1fr);
       }
+
+      .story-image{
+        min-height:420px;
+        height:420px;
+      }
     }
 
+    /* MOBILE */
+
     @media(max-width:600px){
+
       section{
         padding:75px 0;
       }
@@ -730,646 +780,1163 @@
         height:280px;
       }
 
+      .story-image{
+        min-height:340px;
+        height:340px;
+      }
+
+      .nutrition-box{
+        padding:22px;
+      }
+
       .scroll-text{
         display:none;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-<div class="announcement">
-  Proudly made in Cauayan City, Isabela since 1989
-</div>
+  <!-- ANNOUNCEMENT -->
 
-<header>
-  <div class="container nav">
-    <a href="#top">
-      <img src="assets/logo.png" class="logo" alt="Big Brothers Corniks">
-    </a>
-
-    <nav id="navigation">
-      <a href="#flavors">Flavors</a>
-      <a href="#sizes">Sizes</a>
-      <a href="#nutrition">Nutrition</a>
-      <a href="#story">Our Story</a>
-      <a href="#quality">Quality</a>
-      <a href="#buy">Where to Buy</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a href="#buy" class="btn btn-primary desktop-buy">Where to Buy</a>
-
-    <button class="mobile-menu"
-            onclick="document.getElementById('navigation').classList.toggle('open')">
-      ☰
-    </button>
+  <div class="announcement">
+    Proudly made in Cauayan City, Isabela since 1989
   </div>
-</header>
 
-<main id="top">
+  <!-- HEADER -->
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="eyebrow">Real Corn • Real Crunch</div>
+  <header>
+    <div class="container nav">
 
-        <h1>Crunch made proudly in Isabela.</h1>
-
-        <p>
-          Big Brothers Corniks brings bold Filipino flavor in every crispy bite.
-          Choose Classic Cheese, Spicy, or Garlic with Chips — made for merienda,
-          pasalubong, gatherings, and everyday snacking.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#flavors" class="btn btn-primary">Explore Flavors</a>
-          <a href="#buy" class="btn btn-outline">Where to Buy</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="scroll-text">Scroll for the crunch</div>
-  </section>
-
-
-  <!-- FLAVORS -->
-  <section class="flavors" id="flavors">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="section-label">Pick your favorite</div>
-        <h2>Three Signature Flavors</h2>
-        <p>Three flavors. Three sizes. One satisfying crunch.</p>
-      </div>
-
-      <div class="flavor-grid">
-
-        <article class="flavor-card yellow reveal">
-          <img src="assets/cheese-550.jpg" alt="Classic Cheese Big Brothers Corniks">
-          <h3>Classic Cheese</h3>
-          <p>A cheesy favorite made for family snacking and sharing.</p>
-          <div class="sizes">23 g • 90 g • 550 g</div>
-        </article>
-
-        <article class="flavor-card red reveal">
-          <img src="assets/spicy-550.jpg" alt="Spicy Big Brothers Corniks">
-          <h3>Spicy</h3>
-          <p>A bold, savory crunch with a spicy kick for snackers who love heat.</p>
-          <div class="sizes">23 g • 90 g • 550 g</div>
-        </article>
-
-        <article class="flavor-card green reveal">
-          <img src="assets/garlic-550.jpg" alt="Garlic with Chips Big Brothers Corniks">
-          <h3>Garlic with Chips</h3>
-          <p>Garlicky, savory crunch with extra chip-style texture.</p>
-          <div class="sizes">23 g • 90 g • 550 g</div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SIZES -->
-  <section id="sizes">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="section-label">Made for every craving</div>
-        <h2>Available in Three Sizes</h2>
-        <p>From quick snacks to family-sized sharing.</p>
-      </div>
-
-      <div class="size-grid">
-
-        <div class="size-card reveal">
-          <div class="number">23g</div>
-          <h3>Quick Crunch</h3>
-          <p>Perfect for quick cravings, school snacks, sari-sari stores and trial packs.</p>
-        </div>
-
-        <div class="size-card reveal">
-          <div class="number">90g</div>
-          <h3>Everyday Favorite</h3>
-          <p>Great for merienda, travel, sharing and everyday snacking.</p>
-        </div>
-
-        <div class="size-card reveal">
-          <div class="number">550g</div>
-          <h3>Big Sharing Pack</h3>
-          <p>Made for families, parties, pasalubong, gatherings and bulk sharing.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- COMPARISON -->
-  <section class="comparison">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="section-label">Find your crunch</div>
-        <h2>Flavor & Crunch Guide</h2>
-        <p>Not sure which pack is calling your name?</p>
-      </div>
-
-      <div class="table-wrap reveal">
-        <table>
-          <thead>
-            <tr>
-              <th>Flavor</th>
-              <th>Pack Color</th>
-              <th>Taste</th>
-              <th>Spice Level</th>
-              <th>Best For</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Spicy</td>
-              <td>Red</td>
-              <td>Bold, savory, spicy</td>
-              <td>Hot</td>
-              <td>Bold cravings</td>
-            </tr>
-
-            <tr>
-              <td>Garlic with Chips</td>
-              <td>Green</td>
-              <td>Garlicky, savory, crunchy</td>
-              <td>Mild</td>
-              <td>Sharing & merienda</td>
-            </tr>
-
-            <tr>
-              <td>Classic Cheese</td>
-              <td>Yellow</td>
-              <td>Cheesy & savory</td>
-              <td>Mild</td>
-              <td>Family snacking</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- NUTRITION -->
-  <section class="nutrition" id="nutrition">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <div class="section-label">Know your snack</div>
-        <h2>Nutrition Facts</h2>
-        <p>Select a flavor and size to view product information.</p>
-      </div>
-
-      <div class="nutrition-box reveal">
-
-        <div class="selector">
-          <label for="flavorSelect">Flavor</label>
-          <select id="flavorSelect" onchange="updateNutrition()">
-            <option>Classic Cheese</option>
-            <option>Spicy</option>
-            <option>Garlic with Chips</option>
-          </select>
-
-          <label for="sizeSelect">Size</label>
-          <select id="sizeSelect" onchange="updateNutrition()">
-            <option>23 g</option>
-            <option>90 g</option>
-            <option>550 g</option>
-          </select>
-
-          <p class="nutrition-note">
-            Nutrition information is currently being prepared from the verified
-            product labels. No placeholder nutritional numbers are presented as factual.
-          </p>
-        </div>
-
-        <div class="nutrition-panel">
-          <h3>Nutrition Facts</h3>
-
-          <div class="nutrition-row">
-            <strong>Product</strong>
-            <span id="nutritionProduct">Classic Cheese — 23 g</span>
-          </div>
-
-          <div class="nutrition-row">
-            <strong>Serving Size</strong>
-            <span>To be provided</span>
-          </div>
-
-          <div class="nutrition-row">
-            <strong>Calories</strong>
-            <span>To be provided</span>
-          </div>
-
-          <div class="nutrition-row">
-            <strong>Total Fat</strong>
-            <span>To be provided</span>
-          </div>
-
-          <div class="nutrition-row">
-            <strong>Sodium</strong>
-            <span>To be provided</span>
-          </div>
-
-          <div class="nutrition-row">
-            <strong>Carbohydrates</strong>
-            <span>To be provided</span>
-          </div>
-
-          <div class="nutrition-row">
-            <strong>Protein</strong>
-            <span>To be provided</span>
-          </div>
-
-          <div class="nutrition-row">
-            <strong>Ingredients</strong>
-            <span>To be provided</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PROCESS -->
-  <section>
-    <div class="container">
-
-      <div class="section-head reveal">
-        <div class="section-label">Behind the crunch</div>
-        <h2>From Corn to Corniks</h2>
-        <p>A simple look at the process behind every pack.</p>
-      </div>
-
-      <div class="process-grid">
-
-        <div class="process-step reveal">
-          <span>1</span>
-          <h3>Corn Sourcing</h3>
-        </div>
-
-        <div class="process-step reveal">
-          <span>2</span>
-          <h3>Sorting & Cleaning</h3>
-        </div>
-
-        <div class="process-step reveal">
-          <span>3</span>
-          <h3>Boiling</h3>
-        </div>
-
-        <div class="process-step reveal">
-          <span>4</span>
-          <h3>Frying</h3>
-        </div>
-
-        <div class="process-step reveal">
-          <span>5</span>
-          <h3>Drying</h3>
-        </div>
-
-        <div class="process-step reveal">
-          <span>6</span>
-          <h3>Packing</h3>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- STORY -->
-  <section class="story" id="story">
-    <div class="container story-grid">
-
-      <img
-        src="assets/all-flavors.jpg"
-        alt="Big Brothers Corniks product selection"
-        class="story-image reveal"
-      >
-
-      <div class="story-copy reveal">
-        <div class="section-label">Our Story</div>
-
-        <h2>From Isabela to Every Snack Table</h2>
-
-        <div class="heritage-number">1989</div>
-
-        <p>
-          3 Sher's Food Products is a family-owned business from San Fermin,
-          Cauayan City, Isabela.
-        </p>
-
-        <p>
-          Founded by Sergio and Lorna Gonzales, the company grew from a family
-          food business into a trusted name in fried corn snacks.
-        </p>
-
-        <p>
-          Today, Big Brothers Corniks continues that legacy with crunchy Filipino
-          flavors made for pasalubong, gatherings and everyday merienda.
-        </p>
-
-        <strong>Real corn. Real crunch. Proudly made in Isabela.</strong>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- QUALITY -->
-  <section class="quality" id="quality">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <div class="section-label">Made with care</div>
-        <h2>Quality in Every Crunch</h2>
-      </div>
-
-      <div class="quality-grid">
-
-        <div class="quality-card reveal">
-          <div class="quality-icon">🌽</div>
-          <h3>Locally Sourced Corn</h3>
-        </div>
-
-        <div class="quality-card reveal">
-          <div class="quality-icon">✓</div>
-          <h3>Quality Checks</h3>
-        </div>
-
-        <div class="quality-card reveal">
-          <div class="quality-icon">🧼</div>
-          <h3>Hygiene & Food Safety</h3>
-        </div>
-
-        <div class="quality-card reveal">
-          <div class="quality-icon">📦</div>
-          <h3>Resealable Packs</h3>
-        </div>
-
-        <div class="quality-card reveal">
-          <div class="quality-icon">🏭</div>
-          <h3>GMP-Guided Production</h3>
-        </div>
-
-        <div class="quality-card reveal">
-          <div class="quality-icon">◎</div>
-          <h3>Halal Certified</h3>
-        </div>
-
-        <div class="quality-card reveal">
-          <div class="quality-icon">📋</div>
-          <h3>Regulatory Compliance</h3>
-        </div>
-
-        <div class="quality-card reveal">
-          <div class="quality-icon">♥</div>
-          <h3>Family-Owned Heritage</h3>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHERE TO BUY -->
-  <section class="buy" id="buy">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <div class="section-label">Get your crunch</div>
-        <h2>Where to Buy</h2>
-        <p>
-          Find Big Brothers Corniks online or connect with us for bulk,
-          reseller and distributor inquiries.
-        </p>
-      </div>
-
-      <div class="buy-grid">
-
-        <div class="buy-card reveal">
-          <h3>Facebook</h3>
-          <p>@KingofCorniks</p>
-          <a
-            class="btn btn-dark"
-            target="_blank"
-            href="https://www.facebook.com/KingofCorniks">
-            Visit Facebook
-          </a>
-        </div>
-
-        <div class="buy-card reveal">
-          <h3>Shopee</h3>
-          <p>Big Brothers Corniks Official Store</p>
-          <a
-            class="btn btn-primary"
-            target="_blank"
-            href="https://shopee.ph/bigbrotherscorniks">
-            Shop on Shopee
-          </a>
-        </div>
-
-        <div class="buy-card reveal">
-          <h3>Lazada</h3>
-          <p>Serge Country Bites</p>
-          <a
-            class="btn btn-dark"
-            target="_blank"
-            href="https://www.lazada.com.ph/shop/serge-country-bites">
-            Shop on Lazada
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container contact-grid">
-
-      <div class="contact-details reveal">
-        <div class="section-label">Talk to us</div>
-        <h2>Orders, Resellers & Partnerships</h2>
-
-        <p><strong>3 Sher's Food Products</strong></p>
-        <p>Big Brothers Corniks</p>
-        <p>San Fermin, Cauayan City, Isabela</p>
-        <p>📞 0917 811 9422</p>
-
-        <p>
-          ✉️
-          <a href="mailto:3shers@gmail.com">3shers@gmail.com</a>
-        </p>
-
-        <p>
-          ✉️
-          <a href="mailto:bigbrotherscornik@gmail.com">
-            bigbrotherscornik@gmail.com
-          </a>
-        </p>
-      </div>
-
-      <form
-        class="contact-form reveal"
-        onsubmit="sendInquiry(event)"
-      >
-
-        <input
-          type="text"
-          id="name"
-          placeholder="Your name"
-          required
+      <a href="#top">
+        <img
+          src="assets/logo.png"
+          class="logo"
+          alt="Big Brothers Corniks"
         >
+      </a>
 
-        <input
-          type="email"
-          id="email"
-          placeholder="Email address"
-          required
-        >
-
-        <select id="inquiry">
-          <option>General Inquiry</option>
-          <option>Bulk Order</option>
-          <option>Reseller Inquiry</option>
-          <option>Distributor Inquiry</option>
-          <option>Product Question</option>
-        </select>
-
-        <textarea
-          id="message"
-          placeholder="Tell us how we can help..."
-          required
-        ></textarea>
-
-        <button type="submit" class="btn btn-primary">
-          Send Inquiry
-        </button>
-
-      </form>
-
-    </div>
-  </section>
-
-</main>
-
-
-<footer>
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div>
-        <h4>Big Brothers Corniks</h4>
-        <p>
-          Proudly made in Isabela since 1989.<br>
-          By 3 Sher's Food Products.
-        </p>
-      </div>
-
-      <div>
-        <h4>Explore</h4>
+      <nav id="navigation">
         <a href="#flavors">Flavors</a>
         <a href="#sizes">Sizes</a>
         <a href="#nutrition">Nutrition</a>
         <a href="#story">Our Story</a>
+        <a href="#quality">Quality</a>
         <a href="#buy">Where to Buy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a
+        href="#buy"
+        class="btn btn-primary desktop-buy"
+      >
+        Where to Buy
+      </a>
+
+      <button
+        class="mobile-menu"
+        type="button"
+        aria-label="Open navigation menu"
+        onclick="document.getElementById('navigation').classList.toggle('open')"
+      >
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Real Corn • Real Crunch
+          </div>
+
+          <h1>
+            Crunch made proudly in Isabela.
+          </h1>
+
+          <p>
+            Big Brothers Corniks brings bold Filipino flavor in every crispy bite.
+            Choose Classic Cheese, Spicy, or Garlic with Chips — made for merienda,
+            pasalubong, gatherings, and everyday snacking.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#flavors"
+              class="btn btn-primary"
+            >
+              Explore Flavors
+            </a>
+
+            <a
+              href="#buy"
+              class="btn btn-outline"
+            >
+              Where to Buy
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div>
-        <h4>Our Flavors</h4>
-        <a href="#flavors">Classic Cheese</a>
-        <a href="#flavors">Spicy</a>
-        <a href="#flavors">Garlic with Chips</a>
+      <div class="scroll-text">
+        Scroll for the crunch
+      </div>
+
+    </section>
+
+    <!-- FLAVORS -->
+
+    <section
+      class="flavors"
+      id="flavors"
+    >
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <div class="section-label">
+            Pick your favorite
+          </div>
+
+          <h2>
+            Three Signature Flavors
+          </h2>
+
+          <p>
+            Three flavors. Three sizes. One satisfying crunch.
+          </p>
+
+        </div>
+
+        <div class="flavor-grid">
+
+          <!-- CHEESE -->
+
+          <article class="flavor-card yellow reveal">
+
+            <img
+              src="assets/cheese-550g.jpg"
+              alt="Classic Cheese Big Brothers Corniks 550g"
+            >
+
+            <h3>
+              Classic Cheese
+            </h3>
+
+            <p>
+              A cheesy favorite made for family snacking and sharing.
+            </p>
+
+            <div class="sizes">
+              23 g • 90 g • 550 g
+            </div>
+
+          </article>
+
+          <!-- SPICY -->
+
+          <article class="flavor-card red reveal">
+
+            <img
+              src="assets/spicy-550g.jpg"
+              alt="Spicy Big Brothers Corniks 550g"
+            >
+
+            <h3>
+              Spicy
+            </h3>
+
+            <p>
+              A bold, savory crunch with a spicy kick for snackers who love heat.
+            </p>
+
+            <div class="sizes">
+              23 g • 90 g • 550 g
+            </div>
+
+          </article>
+
+          <!-- GARLIC -->
+
+          <article class="flavor-card green reveal">
+
+            <img
+              src="assets/garlic-550g.jpg"
+              alt="Garlic with Chips Big Brothers Corniks 550g"
+            >
+
+            <h3>
+              Garlic with Chips
+            </h3>
+
+            <p>
+              Garlicky, savory crunch with extra chip-style texture.
+            </p>
+
+            <div class="sizes">
+              23 g • 90 g • 550 g
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SIZES -->
+
+    <section id="sizes">
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <div class="section-label">
+            Made for every craving
+          </div>
+
+          <h2>
+            Available in Three Sizes
+          </h2>
+
+          <p>
+            From quick snacks to family-sized sharing.
+          </p>
+
+        </div>
+
+        <div class="size-grid">
+
+          <div class="size-card reveal">
+
+            <div class="number">
+              23g
+            </div>
+
+            <h3>
+              Quick Crunch
+            </h3>
+
+            <p>
+              Perfect for quick cravings, school snacks,
+              sari-sari stores and trial packs.
+            </p>
+
+          </div>
+
+          <div class="size-card reveal">
+
+            <div class="number">
+              90g
+            </div>
+
+            <h3>
+              Everyday Favorite
+            </h3>
+
+            <p>
+              Great for merienda, travel, sharing and everyday snacking.
+            </p>
+
+          </div>
+
+          <div class="size-card reveal">
+
+            <div class="number">
+              550g
+            </div>
+
+            <h3>
+              Big Sharing Pack
+            </h3>
+
+            <p>
+              Made for families, parties, pasalubong,
+              gatherings and bulk sharing.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- COMPARISON -->
+
+    <section class="comparison">
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <div class="section-label">
+            Find your crunch
+          </div>
+
+          <h2>
+            Flavor & Crunch Guide
+          </h2>
+
+          <p>
+            Not sure which pack is calling your name?
+          </p>
+
+        </div>
+
+        <div class="table-wrap reveal">
+
+          <table>
+
+            <thead>
+
+              <tr>
+                <th>Flavor</th>
+                <th>Pack Color</th>
+                <th>Taste</th>
+                <th>Spice Level</th>
+                <th>Best For</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>Spicy</td>
+                <td>Red</td>
+                <td>Bold, savory, spicy</td>
+                <td>Hot</td>
+                <td>Bold cravings</td>
+              </tr>
+
+              <tr>
+                <td>Garlic with Chips</td>
+                <td>Green</td>
+                <td>Garlicky, savory, crunchy</td>
+                <td>Mild</td>
+                <td>Sharing & merienda</td>
+              </tr>
+
+              <tr>
+                <td>Classic Cheese</td>
+                <td>Yellow</td>
+                <td>Cheesy & savory</td>
+                <td>Mild</td>
+                <td>Family snacking</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- NUTRITION -->
+
+    <section
+      class="nutrition"
+      id="nutrition"
+    >
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <div class="section-label">
+            Know your snack
+          </div>
+
+          <h2>
+            Nutrition Facts
+          </h2>
+
+          <p>
+            Select a flavor and size to view product information.
+          </p>
+
+        </div>
+
+        <div class="nutrition-box reveal">
+
+          <div class="selector">
+
+            <label for="flavorSelect">
+              Flavor
+            </label>
+
+            <select
+              id="flavorSelect"
+              onchange="updateNutrition()"
+            >
+              <option>Classic Cheese</option>
+              <option>Spicy</option>
+              <option>Garlic with Chips</option>
+            </select>
+
+            <label for="sizeSelect">
+              Size
+            </label>
+
+            <select
+              id="sizeSelect"
+              onchange="updateNutrition()"
+            >
+              <option>23 g</option>
+              <option>90 g</option>
+              <option>550 g</option>
+            </select>
+
+            <p class="nutrition-note">
+              Nutrition information is currently being prepared
+              from the verified product labels.
+              No placeholder nutritional numbers are presented as factual.
+            </p>
+
+          </div>
+
+          <div class="nutrition-panel">
+
+            <h3>
+              Nutrition Facts
+            </h3>
+
+            <div class="nutrition-row">
+              <strong>Product</strong>
+              <span id="nutritionProduct">
+                Classic Cheese — 23 g
+              </span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Serving Size</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Calories</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Total Fat</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Saturated Fat</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Trans Fat</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Cholesterol</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Sodium</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Carbohydrates</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Dietary Fiber</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Total Sugars</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Protein</strong>
+              <span>To be provided</span>
+            </div>
+
+            <div class="nutrition-row">
+              <strong>Ingredients</strong>
+              <span>To be provided</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROCESS -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <div class="section-label">
+            Behind the crunch
+          </div>
+
+          <h2>
+            From Corn to Corniks
+          </h2>
+
+          <p>
+            A simple look at the process behind every pack.
+          </p>
+
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-step reveal">
+            <span>1</span>
+            <h3>Corn Sourcing</h3>
+          </div>
+
+          <div class="process-step reveal">
+            <span>2</span>
+            <h3>Sorting & Cleaning</h3>
+          </div>
+
+          <div class="process-step reveal">
+            <span>3</span>
+            <h3>Boiling</h3>
+          </div>
+
+          <div class="process-step reveal">
+            <span>4</span>
+            <h3>Frying</h3>
+          </div>
+
+          <div class="process-step reveal">
+            <span>5</span>
+            <h3>Drying</h3>
+          </div>
+
+          <div class="process-step reveal">
+            <span>6</span>
+            <h3>Packing</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- STORY -->
+
+    <section
+      class="story"
+      id="story"
+    >
+
+      <div class="container story-grid">
+
+        <img
+          src="assets/90g-flavors-group.jpg"
+          alt="Big Brothers Corniks three flavor selection"
+          class="story-image reveal"
+        >
+
+        <div class="story-copy reveal">
+
+          <div class="section-label">
+            Our Story
+          </div>
+
+          <h2>
+            From Isabela to Every Snack Table
+          </h2>
+
+          <div class="heritage-number">
+            1989
+          </div>
+
+          <p>
+            3 Sher's Food Products is a family-owned business
+            from San Fermin, Cauayan City, Isabela.
+          </p>
+
+          <p>
+            Founded by Sergio and Lorna Gonzales, the company
+            grew from a family food business into a trusted
+            name in fried corn snacks.
+          </p>
+
+          <p>
+            Today, Big Brothers Corniks continues that legacy
+            with crunchy Filipino flavors made for pasalubong,
+            gatherings and everyday merienda.
+          </p>
+
+          <strong>
+            Real corn. Real crunch. Proudly made in Isabela.
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- QUALITY -->
+
+    <section
+      class="quality"
+      id="quality"
+    >
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <div class="section-label">
+            Made with care
+          </div>
+
+          <h2>
+            Quality in Every Crunch
+          </h2>
+
+        </div>
+
+        <div class="quality-grid">
+
+          <div class="quality-card reveal">
+            <div class="quality-icon">🌽</div>
+            <h3>Locally Sourced Corn</h3>
+          </div>
+
+          <div class="quality-card reveal">
+            <div class="quality-icon">✓</div>
+            <h3>Quality Checks</h3>
+          </div>
+
+          <div class="quality-card reveal">
+            <div class="quality-icon">🧼</div>
+            <h3>Hygiene & Food Safety</h3>
+          </div>
+
+          <div class="quality-card reveal">
+            <div class="quality-icon">📦</div>
+            <h3>Resealable Packs</h3>
+          </div>
+
+          <div class="quality-card reveal">
+            <div class="quality-icon">🏭</div>
+            <h3>GMP-Guided Production</h3>
+          </div>
+
+          <div class="quality-card reveal">
+            <div class="quality-icon">◎</div>
+            <h3>Halal Certified</h3>
+          </div>
+
+          <div class="quality-card reveal">
+            <div class="quality-icon">📋</div>
+            <h3>Regulatory Compliance</h3>
+          </div>
+
+          <div class="quality-card reveal">
+            <div class="quality-icon">♥</div>
+            <h3>Family-Owned Heritage</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- WHERE TO BUY -->
+
+    <section
+      class="buy"
+      id="buy"
+    >
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <div class="section-label">
+            Get your crunch
+          </div>
+
+          <h2>
+            Where to Buy
+          </h2>
+
+          <p>
+            Find Big Brothers Corniks online or connect with us
+            for bulk, reseller and distributor inquiries.
+          </p>
+
+        </div>
+
+        <div class="buy-grid">
+
+          <!-- FACEBOOK -->
+
+          <div class="buy-card reveal">
+
+            <h3>
+              Facebook
+            </h3>
+
+            <p>
+              @KingofCorniks
+            </p>
+
+            <a
+              class="btn btn-dark"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/KingofCorniks"
+            >
+              Visit Facebook
+            </a>
+
+          </div>
+
+          <!-- SHOPEE -->
+
+          <div class="buy-card reveal">
+
+            <h3>
+              Shopee
+            </h3>
+
+            <p>
+              Big Brothers Corniks Official Store
+            </p>
+
+            <a
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://shopee.ph/bigbrotherscorniks"
+            >
+              Shop on Shopee
+            </a>
+
+          </div>
+
+          <!-- LAZADA -->
+
+          <div class="buy-card reveal">
+
+            <h3>
+              Lazada
+            </h3>
+
+            <p>
+              Serge Country Bites
+            </p>
+
+            <a
+              class="btn btn-dark"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.lazada.com.ph/shop/serge-country-bites"
+            >
+              Shop on Lazada
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-details reveal">
+
+          <div class="section-label">
+            Talk to us
+          </div>
+
+          <h2>
+            Orders, Resellers & Partnerships
+          </h2>
+
+          <p>
+            <strong>3 Sher's Food Products</strong>
+          </p>
+
+          <p>
+            Big Brothers Corniks
+          </p>
+
+          <p>
+            San Fermin, Cauayan City, Isabela
+          </p>
+
+          <p>
+            📞
+            <a href="tel:+639178119422">
+              0917 811 9422
+            </a>
+          </p>
+
+          <p>
+            ✉️
+            <a href="mailto:3shers@gmail.com">
+              3shers@gmail.com
+            </a>
+          </p>
+
+          <p>
+            ✉️
+            <a href="mailto:bigbrotherscornik@gmail.com">
+              bigbrotherscornik@gmail.com
+            </a>
+          </p>
+
+        </div>
+
+        <form
+          class="contact-form reveal"
+          onsubmit="sendInquiry(event)"
+        >
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Your name"
+            autocomplete="name"
+            required
+          >
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Email address"
+            autocomplete="email"
+            required
+          >
+
+          <select id="inquiry">
+
+            <option>
+              General Inquiry
+            </option>
+
+            <option>
+              Bulk Order
+            </option>
+
+            <option>
+              Reseller Inquiry
+            </option>
+
+            <option>
+              Distributor Inquiry
+            </option>
+
+            <option>
+              Product Question
+            </option>
+
+          </select>
+
+          <textarea
+            id="message"
+            placeholder="Tell us how we can help..."
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+            Send Inquiry
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h4>
+            Big Brothers Corniks
+          </h4>
+
+          <p>
+            Proudly made in Isabela since 1989.
+            <br>
+            By 3 Sher's Food Products.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="#flavors">
+            Flavors
+          </a>
+
+          <a href="#sizes">
+            Sizes
+          </a>
+
+          <a href="#nutrition">
+            Nutrition
+          </a>
+
+          <a href="#story">
+            Our Story
+          </a>
+
+          <a href="#buy">
+            Where to Buy
+          </a>
+
+        </div>
+
+        <div>
+
+          <h4>
+            Our Flavors
+          </h4>
+
+          <a href="#flavors">
+            Classic Cheese
+          </a>
+
+          <a href="#flavors">
+            Spicy
+          </a>
+
+          <a href="#flavors">
+            Garlic with Chips
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        ©
+        <span id="year"></span>
+        Big Brothers Corniks / 3 Sher's Food Products.
+        All rights reserved.
+
       </div>
 
     </div>
 
-    <div class="footer-bottom">
-      © <span id="year"></span> Big Brothers Corniks / 3 Sher's Food Products.
-      All rights reserved.
-    </div>
+  </footer>
 
-  </div>
-</footer>
+  <script>
 
+    /* ==============================
+       CURRENT YEAR
+    ============================== */
 
-<script>
-  // Current year
-  document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
 
-  // Nutrition selector
-  function updateNutrition(){
-    const flavor = document.getElementById("flavorSelect").value;
-    const size = document.getElementById("sizeSelect").value;
+    /* ==============================
+       NUTRITION SELECTOR
+    ============================== */
 
-    document.getElementById("nutritionProduct").textContent =
-      flavor + " — " + size;
-  }
+    function updateNutrition(){
 
+      const flavor =
+        document.getElementById("flavorSelect").value;
 
-  // Static HTML inquiry form.
-  // Opens user's default email app.
-  function sendInquiry(event){
-    event.preventDefault();
+      const size =
+        document.getElementById("sizeSelect").value;
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const inquiry = document.getElementById("inquiry").value;
-    const message = document.getElementById("message").value;
+      document.getElementById("nutritionProduct").textContent =
+        flavor + " — " + size;
 
-    const subject = encodeURIComponent(
-      "Big Brothers Corniks - " + inquiry
-    );
-
-    const body = encodeURIComponent(
-      "Name: " + name +
-      "\nEmail: " + email +
-      "\nInquiry Type: " + inquiry +
-      "\n\nMessage:\n" + message
-    );
-
-    window.location.href =
-      "mailto:3shers@gmail.com?subject=" + subject + "&body=" + body;
-  }
+    }
 
 
-  // Scroll animations
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add("visible");
-      }
-    });
-  },{
-    threshold:.12
-  });
+    /* ==============================
+       CONTACT FORM
 
-  document.querySelectorAll(".reveal").forEach(el=>{
-    observer.observe(el);
-  });
+       Because this is a static HTML
+       website, this opens the visitor's
+       email program.
+    ============================== */
+
+    function sendInquiry(event){
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value;
+
+      const email =
+        document.getElementById("email").value;
+
+      const inquiry =
+        document.getElementById("inquiry").value;
+
+      const message =
+        document.getElementById("message").value;
 
 
-  // Close mobile menu after clicking
-  document.querySelectorAll("#navigation a").forEach(link=>{
-    link.addEventListener("click",()=>{
-      document.getElementById("navigation").classList.remove("open");
-    });
-  });
-</script>
+      const subject =
+        encodeURIComponent(
+          "Big Brothers Corniks - " + inquiry
+        );
+
+
+      const body =
+        encodeURIComponent(
+
+          "Name: " + name +
+
+          "\nEmail: " + email +
+
+          "\nInquiry Type: " + inquiry +
+
+          "\n\nMessage:\n" + message
+
+        );
+
+
+      window.location.href =
+        "mailto:3shers@gmail.com?subject="
+        + subject
+        + "&body="
+        + body;
+
+    }
+
+
+    /* ==============================
+       SCROLL ANIMATIONS
+    ============================== */
+
+    const observer =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if(entry.isIntersecting){
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold:.12
+        }
+
+      );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach((element) => {
+
+        observer.observe(element);
+
+      });
+
+
+    /* ==============================
+       MOBILE MENU
+    ============================== */
+
+    document
+      .querySelectorAll("#navigation a")
+      .forEach((link) => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            document
+              .getElementById("navigation")
+              .classList
+              .remove("open");
+
+          }
+        );
+
+      });
+
+  </script>
 
 </body>
 </html>
