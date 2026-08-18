@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -18,15 +20,14 @@
   >
 
   <style>
+
     :root{
       --yellow:#FFD224;
       --red:#E43C27;
       --green:#287747;
       --blue:#1859A8;
       --cream:#FFF6E5;
-      --orange:#F67A2A;
       --ink:#19140F;
-      --brown:#3A2418;
       --white:#FFFFFF;
 
       --radius-xl:38px;
@@ -51,13 +52,13 @@
 
     body{
       font-family:
-        Inter,
         Arial,
         Helvetica,
         sans-serif;
 
       background:var(--cream);
       color:var(--ink);
+
       overflow-x:hidden;
     }
 
@@ -67,8 +68,7 @@
     }
 
 
-    img,
-    video{
+    img{
       display:block;
       max-width:100%;
     }
@@ -89,10 +89,11 @@
 
 
     .container{
-      width:min(
-        1240px,
-        calc(100% - 40px)
-      );
+      width:
+        min(
+          1240px,
+          calc(100% - 40px)
+        );
 
       margin:auto;
     }
@@ -112,23 +113,30 @@
         );
 
       line-height:.88;
+
       letter-spacing:-.07em;
-      font-weight:950;
+
+      font-weight:900;
+
       text-transform:uppercase;
     }
 
 
     .eyebrow{
       display:inline-flex;
+
       align-items:center;
+
       gap:8px;
 
       margin-bottom:18px;
 
       font-size:.74rem;
+
       font-weight:900;
 
       letter-spacing:.14em;
+
       text-transform:uppercase;
     }
 
@@ -147,8 +155,10 @@
 
     .btn{
       display:inline-flex;
+
       align-items:center;
       justify-content:center;
+
       gap:10px;
 
       min-height:52px;
@@ -156,9 +166,11 @@
       padding:0 23px;
 
       border:none;
+
       border-radius:999px;
 
       font-size:.92rem;
+
       font-weight:900;
 
       cursor:pointer;
@@ -171,8 +183,7 @@
 
 
     .btn:hover{
-      transform:
-        translateY(-3px);
+      transform:translateY(-3px);
     }
 
 
@@ -181,14 +192,7 @@
       color:var(--ink);
 
       box-shadow:
-        0 12px 28px
-        rgba(255,210,36,.28);
-    }
-
-
-    .btn-white{
-      background:white;
-      color:var(--ink);
+        0 12px 28px rgba(255,210,36,.25);
     }
 
 
@@ -199,49 +203,53 @@
 
 
     .btn-outline-white{
-      background:
-        rgba(255,255,255,.08);
+      background:rgba(255,255,255,.08);
 
       color:white;
 
       border:
-        1px solid
-        rgba(255,255,255,.6);
+        1px solid rgba(255,255,255,.6);
 
-      backdrop-filter:
-        blur(10px);
+      backdrop-filter:blur(10px);
     }
 
 
-    /* =========================
+    /* =====================================
        ANNOUNCEMENT
-    ========================= */
+    ===================================== */
 
     .announcement{
+      position:relative;
+
+      z-index:2000;
+
       background:var(--yellow);
+
       color:var(--ink);
 
       text-align:center;
 
-      padding:
-        9px 15px;
+      padding:9px 15px;
 
       font-size:.79rem;
-      font-weight:950;
+
+      font-weight:900;
 
       letter-spacing:.07em;
+
       text-transform:uppercase;
     }
 
 
-    /* =========================
+    /* =====================================
        NAVIGATION
-    ========================= */
+    ===================================== */
 
     header{
       position:fixed;
 
       top:34px;
+
       left:0;
       right:0;
 
@@ -254,20 +262,12 @@
     header.scrolled{
       top:0;
 
-      background:
-        rgba(
-          255,
-          246,
-          229,
-          .94
-        );
+      background:rgba(255,246,229,.95);
 
-      backdrop-filter:
-        blur(20px);
+      backdrop-filter:blur(20px);
 
       box-shadow:
-        0 8px 30px
-        rgba(0,0,0,.07);
+        0 8px 30px rgba(0,0,0,.08);
     }
 
 
@@ -277,6 +277,7 @@
       display:flex;
 
       align-items:center;
+
       justify-content:space-between;
 
       gap:24px;
@@ -285,15 +286,10 @@
 
     .logo{
       width:180px;
+
       max-height:68px;
 
       object-fit:contain;
-
-      filter:
-        drop-shadow(
-          0 5px 15px
-          rgba(0,0,0,.08)
-        );
     }
 
 
@@ -305,7 +301,14 @@
       gap:24px;
 
       font-size:.86rem;
+
       font-weight:900;
+    }
+
+
+    header:not(.scrolled)
+    .nav-links{
+      color:white;
     }
 
 
@@ -320,16 +323,24 @@
       position:absolute;
 
       left:0;
+
       bottom:-7px;
 
       width:0;
+
       height:3px;
 
-      background:var(--red);
+      background:var(--yellow);
 
       border-radius:20px;
 
       transition:.25s ease;
+    }
+
+
+    header.scrolled
+    .nav-links a::after{
+      background:var(--red);
     }
 
 
@@ -338,6 +349,14 @@
     }
 
 
+    .nav-cta{
+      background:var(--yellow);
+
+      color:var(--ink);
+    }
+
+
+    header.scrolled
     .nav-cta{
       background:var(--ink);
       color:white;
@@ -348,6 +367,7 @@
       display:none;
 
       border:0;
+
       background:transparent;
 
       font-size:1.8rem;
@@ -356,18 +376,9 @@
     }
 
 
-    header:not(.scrolled)
-    .nav-links,
-
-    header:not(.scrolled)
-    .menu-toggle{
-      color:white;
-    }
-
-
-    /* =========================
-       HERO VIDEO
-    ========================= */
+    /* =====================================
+       HERO
+    ===================================== */
 
     .hero{
       min-height:100svh;
@@ -376,44 +387,18 @@
 
       display:flex;
 
-      align-items:flex-end;
+      align-items:center;
 
       overflow:hidden;
 
-      background:#24140d;
-
       color:white;
-    }
-
-
-    .hero-video{
-      position:absolute;
-
-      inset:0;
-
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-
-      z-index:0;
-    }
-
-
-    .hero-fallback{
-      position:absolute;
-
-      inset:0;
 
       background:
-        url(
-          "assets/550g-flavors-group.JPG"
-        )
+        #231309
+        url("assets/hero.png")
         center center /
         cover
         no-repeat;
-
-      z-index:0;
     }
 
 
@@ -422,21 +407,22 @@
 
       inset:0;
 
-      z-index:1;
-
       background:
         linear-gradient(
           90deg,
-          rgba(10,8,5,.84) 0%,
-          rgba(10,8,5,.58) 42%,
-          rgba(10,8,5,.12) 75%
+          rgba(13,7,3,.90) 0%,
+          rgba(13,7,3,.77) 28%,
+          rgba(13,7,3,.38) 48%,
+          rgba(13,7,3,.05) 72%
         ),
 
         linear-gradient(
           0deg,
-          rgba(0,0,0,.45),
-          transparent 45%
+          rgba(0,0,0,.25),
+          transparent 50%
         );
+
+      z-index:1;
     }
 
 
@@ -448,12 +434,12 @@
       width:100%;
 
       padding:
-        210px 0 85px;
+        190px 0 100px;
     }
 
 
     .hero-copy{
-      max-width:840px;
+      max-width:690px;
     }
 
 
@@ -466,17 +452,20 @@
       font-size:
         clamp(
           4rem,
-          9vw,
-          9rem
+          8.7vw,
+          8.7rem
         );
 
-      font-weight:950;
+      font-weight:900;
 
       letter-spacing:-.075em;
 
       line-height:.82;
 
       text-transform:uppercase;
+
+      text-shadow:
+        0 4px 30px rgba(0,0,0,.18);
     }
 
 
@@ -486,7 +475,7 @@
 
 
     .hero-sub{
-      max-width:610px;
+      max-width:570px;
 
       margin:
         30px 0 34px;
@@ -495,67 +484,21 @@
         clamp(
           1rem,
           2vw,
-          1.25rem
+          1.2rem
         );
 
-      line-height:1.55;
+      line-height:1.6;
 
-      color:#fff5df;
+      color:#fff4dc;
     }
 
 
     .hero-actions{
       display:flex;
 
-      gap:12px;
-
       flex-wrap:wrap;
-    }
 
-
-    .hero-product-orbit{
-      position:absolute;
-
-      right:-3vw;
-      bottom:-50px;
-
-      z-index:2;
-
-      width:
-        min(
-          500px,
-          40vw
-        );
-
-      animation:
-        floatPack
-        5s
-        ease-in-out
-        infinite;
-
-      filter:
-        drop-shadow(
-          0 30px 30px
-          rgba(0,0,0,.35)
-        );
-    }
-
-
-    @keyframes floatPack{
-
-      0%,
-      100%{
-        transform:
-          translateY(0)
-          rotate(1deg);
-      }
-
-      50%{
-        transform:
-          translateY(-16px)
-          rotate(-1deg);
-      }
-
+      gap:12px;
     }
 
 
@@ -563,28 +506,30 @@
       position:absolute;
 
       right:25px;
+
       bottom:35px;
 
       z-index:3;
 
-      writing-mode:
-        vertical-rl;
+      writing-mode:vertical-rl;
 
-      text-transform:
-        uppercase;
+      text-transform:uppercase;
 
       font-size:.67rem;
+
       font-weight:900;
 
       letter-spacing:.18em;
+
+      color:white;
 
       opacity:.7;
     }
 
 
-    /* =========================
-       MARQUEE
-    ========================= */
+    /* =====================================
+       TICKER
+    ===================================== */
 
     .ticker{
       overflow:hidden;
@@ -594,10 +539,6 @@
       color:var(--yellow);
 
       padding:17px 0;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,.08);
     }
 
 
@@ -618,7 +559,8 @@
       padding-right:38px;
 
       font-size:1.03rem;
-      font-weight:950;
+
+      font-weight:900;
 
       text-transform:uppercase;
 
@@ -641,14 +583,12 @@
     }
 
 
-    /* =========================
+    /* =====================================
        INTRO
-    ========================= */
+    ===================================== */
 
     .intro{
       background:var(--cream);
-
-      position:relative;
 
       overflow:hidden;
     }
@@ -693,8 +633,7 @@
 
       border-radius:50%;
 
-      background:
-        var(--yellow);
+      background:var(--yellow);
     }
 
 
@@ -712,12 +651,10 @@
 
       filter:
         drop-shadow(
-          0 30px 30px
-          rgba(0,0,0,.18)
+          0 30px 30px rgba(0,0,0,.18)
         );
 
-      transform:
-        rotate(3deg);
+      transform:rotate(3deg);
     }
 
 
@@ -725,11 +662,13 @@
       position:absolute;
 
       left:-20px;
+
       bottom:30px;
 
       z-index:3;
 
       width:150px;
+
       height:150px;
 
       border-radius:50%;
@@ -740,33 +679,31 @@
 
       text-align:center;
 
-      background:
-        var(--red);
+      background:var(--red);
 
       color:white;
 
-      transform:
-        rotate(-12deg);
+      transform:rotate(-12deg);
 
       font-size:1.15rem;
-      font-weight:950;
+
+      font-weight:900;
 
       line-height:1.05;
 
-      text-transform:
-        uppercase;
+      text-transform:uppercase;
 
-      box-shadow:
-        var(--shadow);
+      box-shadow:var(--shadow);
     }
 
 
-    /* =========================
+    /* =====================================
        FLAVORS
-    ========================= */
+    ===================================== */
 
     .flavors{
       background:var(--ink);
+
       color:white;
 
       overflow:hidden;
@@ -776,8 +713,7 @@
     .flavors-header{
       display:flex;
 
-      justify-content:
-        space-between;
+      justify-content:space-between;
 
       align-items:end;
 
@@ -804,49 +740,45 @@
 
 
     .flavor-card{
-      min-height:610px;
+      min-height:650px;
 
       position:relative;
 
       overflow:hidden;
 
-      border-radius:
-        var(--radius-xl);
+      border-radius:var(--radius-xl);
 
       padding:50px;
 
       display:grid;
 
       grid-template-columns:
-        .85fr 1.15fr;
+        .78fr 1.22fr;
+
+      gap:45px;
 
       align-items:center;
 
-      box-shadow:
-        var(--shadow);
+      box-shadow:var(--shadow);
     }
 
 
     .flavor-card.cheese{
-      background:
-        var(--yellow);
+      background:var(--yellow);
 
-      color:
-        var(--ink);
+      color:var(--ink);
     }
 
 
     .flavor-card.spicy{
-      background:
-        var(--red);
+      background:var(--red);
 
       color:white;
     }
 
 
     .flavor-card.garlic{
-      background:
-        var(--green);
+      background:var(--green);
 
       color:white;
     }
@@ -856,10 +788,6 @@
       position:relative;
 
       z-index:3;
-
-      align-self:end;
-
-      padding-bottom:20px;
     }
 
 
@@ -869,7 +797,8 @@
       margin-bottom:15px;
 
       font-size:.78rem;
-      font-weight:950;
+
+      font-weight:900;
 
       letter-spacing:.15em;
 
@@ -882,7 +811,7 @@
     .flavor-copy h3{
       font-size:
         clamp(
-          3rem,
+          3.3rem,
           6vw,
           7rem
         );
@@ -891,8 +820,7 @@
 
       letter-spacing:-.07em;
 
-      text-transform:
-        uppercase;
+      text-transform:uppercase;
     }
 
 
@@ -917,44 +845,53 @@
         9px 14px;
 
       border:
-        1px solid
-        currentColor;
+        1px solid currentColor;
 
       border-radius:999px;
 
       font-size:.78rem;
+
       font-weight:900;
 
-      text-transform:
-        uppercase;
+      text-transform:uppercase;
     }
 
 
-    .flavor-image{
+    .flavor-image-wrap{
       position:relative;
 
       z-index:2;
 
-      height:560px;
       width:100%;
 
-      object-fit:contain;
+      height:570px;
 
-      filter:
-        drop-shadow(
-          0 28px 30px
-          rgba(0,0,0,.25)
-        );
+      overflow:hidden;
 
-      transition:.45s ease;
+      border-radius:30px;
+
+      box-shadow:
+        0 30px 55px rgba(0,0,0,.22);
+
+      background:#ddd;
+    }
+
+
+    .flavor-image{
+      width:100%;
+
+      height:100%;
+
+      object-fit:cover;
+
+      transition:
+        transform .5s ease;
     }
 
 
     .flavor-card:hover
     .flavor-image{
-      transform:
-        scale(1.06)
-        rotate(-2deg);
+      transform:scale(1.035);
     }
 
 
@@ -962,7 +899,8 @@
       position:absolute;
 
       right:-2%;
-      top:0;
+
+      top:-10px;
 
       z-index:0;
 
@@ -975,22 +913,21 @@
 
       line-height:.8;
 
-      font-weight:950;
+      font-weight:900;
 
       letter-spacing:-.09em;
 
-      opacity:.09;
+      opacity:.08;
 
-      text-transform:
-        uppercase;
+      text-transform:uppercase;
 
       white-space:nowrap;
     }
 
 
-    /* =========================
+    /* =====================================
        SIZES
-    ========================= */
+    ===================================== */
 
     .sizes-section{
       background:var(--cream);
@@ -1001,10 +938,7 @@
       display:grid;
 
       grid-template-columns:
-        repeat(
-          3,
-          1fr
-        );
+        repeat(3,1fr);
 
       gap:20px;
 
@@ -1013,22 +947,16 @@
 
 
     .size-card{
-      position:relative;
-
-      overflow:hidden;
-
       min-height:510px;
 
       padding:30px;
 
-      border-radius:
-        var(--radius-lg);
+      border-radius:var(--radius-lg);
 
       background:white;
 
       box-shadow:
-        0 15px 45px
-        rgba(25,20,15,.08);
+        0 15px 45px rgba(25,20,15,.08);
 
       display:flex;
 
@@ -1037,8 +965,9 @@
 
 
     .size-card img{
-      height:290px;
       width:100%;
+
+      height:290px;
 
       object-fit:contain;
 
@@ -1047,8 +976,7 @@
 
 
     .size-card:hover img{
-      transform:
-        scale(1.06);
+      transform:scale(1.06);
     }
 
 
@@ -1072,12 +1000,13 @@
     }
 
 
-    /* =========================
+    /* =====================================
        STORY
-    ========================= */
+    ===================================== */
 
     .story{
       background:var(--blue);
+
       color:white;
 
       overflow:hidden;
@@ -1104,14 +1033,11 @@
     .story-image{
       width:100%;
 
-      border-radius:
-        var(--radius-xl);
+      border-radius:var(--radius-xl);
 
-      box-shadow:
-        var(--shadow);
+      box-shadow:var(--shadow);
 
-      transform:
-        rotate(-2deg);
+      transform:rotate(-2deg);
     }
 
 
@@ -1119,17 +1045,17 @@
       position:absolute;
 
       top:-25px;
+
       right:-20px;
 
-      background:
-        var(--yellow);
+      background:var(--yellow);
 
-      color:
-        var(--ink);
+      color:var(--ink);
 
       border-radius:50%;
 
       width:170px;
+
       height:170px;
 
       display:grid;
@@ -1139,18 +1065,18 @@
       text-align:center;
 
       font-size:2.6rem;
-      font-weight:950;
+
+      font-weight:900;
 
       line-height:.9;
 
-      transform:
-        rotate(9deg);
+      transform:rotate(9deg);
     }
 
 
-    .story-copy .eyebrow{
-      color:
-        var(--yellow);
+    .story-copy
+    .eyebrow{
+      color:var(--yellow);
     }
 
 
@@ -1167,13 +1093,12 @@
     }
 
 
-    /* =========================
+    /* =====================================
        PROCESS
-    ========================= */
+    ===================================== */
 
     .process{
-      background:
-        var(--cream);
+      background:var(--cream);
     }
 
 
@@ -1181,10 +1106,7 @@
       display:grid;
 
       grid-template-columns:
-        repeat(
-          3,
-          1fr
-        );
+        repeat(3,1fr);
 
       gap:18px;
 
@@ -1202,16 +1124,14 @@
       background:white;
 
       box-shadow:
-        0 12px 35px
-        rgba(25,20,15,.07);
+        0 12px 35px rgba(25,20,15,.07);
 
       transition:.25s ease;
     }
 
 
     .process-card:hover{
-      transform:
-        translateY(-6px);
+      transform:translateY(-6px);
     }
 
 
@@ -1219,19 +1139,20 @@
       display:flex;
 
       align-items:center;
+
       justify-content:center;
 
       width:50px;
+
       height:50px;
 
       border-radius:50%;
 
-      background:
-        var(--yellow);
+      background:var(--yellow);
 
       margin-bottom:35px;
 
-      font-weight:950;
+      font-weight:900;
     }
 
 
@@ -1249,9 +1170,9 @@
     }
 
 
-    /* =========================
+    /* =====================================
        NUTRITION
-    ========================= */
+    ===================================== */
 
     .nutrition{
       background:white;
@@ -1273,13 +1194,11 @@
 
 
     .selector-box{
-      background:
-        var(--yellow);
+      background:var(--yellow);
 
       padding:34px;
 
-      border-radius:
-        var(--radius-lg);
+      border-radius:var(--radius-lg);
 
       position:sticky;
 
@@ -1290,11 +1209,7 @@
     .selector-box h3{
       font-size:2.1rem;
 
-      line-height:1;
-
       margin-bottom:24px;
-
-      letter-spacing:-.04em;
     }
 
 
@@ -1305,10 +1220,10 @@
         18px 0 8px;
 
       font-size:.78rem;
-      font-weight:950;
 
-      text-transform:
-        uppercase;
+      font-weight:900;
+
+      text-transform:uppercase;
 
       letter-spacing:.08em;
     }
@@ -1336,20 +1251,17 @@
 
       line-height:1.6;
 
-      opacity:.78;
+      opacity:.8;
     }
 
 
     .nutrition-panel{
       border:
-        5px solid
-        var(--ink);
+        5px solid var(--ink);
 
       background:white;
 
       padding:25px;
-
-      color:var(--ink);
     }
 
 
@@ -1359,20 +1271,16 @@
       letter-spacing:-.05em;
 
       border-bottom:
-        10px solid
-        var(--ink);
+        10px solid var(--ink);
 
       padding-bottom:10px;
-
-      margin-bottom:2px;
     }
 
 
     .nutrition-row{
       display:flex;
 
-      justify-content:
-        space-between;
+      justify-content:space-between;
 
       gap:20px;
 
@@ -1380,20 +1288,18 @@
         10px 0;
 
       border-bottom:
-        1px solid
-        var(--ink);
+        1px solid var(--ink);
 
       font-size:.92rem;
     }
 
 
-    /* =========================
+    /* =====================================
        QUALITY
-    ========================= */
+    ===================================== */
 
     .quality{
-      background:
-        var(--yellow);
+      background:var(--yellow);
     }
 
 
@@ -1401,10 +1307,7 @@
       display:grid;
 
       grid-template-columns:
-        repeat(
-          4,
-          1fr
-        );
+        repeat(4,1fr);
 
       gap:15px;
 
@@ -1420,21 +1323,10 @@
       border-radius:22px;
 
       background:
-        rgba(
-          255,
-          255,
-          255,
-          .72
-        );
+        rgba(255,255,255,.72);
 
       border:
-        2px solid
-        rgba(
-          25,
-          20,
-          15,
-          .08
-        );
+        2px solid rgba(25,20,15,.06);
     }
 
 
@@ -1450,26 +1342,19 @@
     }
 
 
-    /* =========================
-       WHERE TO BUY
-    ========================= */
+    /* =====================================
+       BUY
+    ===================================== */
 
     .buy{
-      background:
-        var(--red);
+      background:var(--red);
 
       color:white;
     }
 
 
-    .buy-head{
-      max-width:900px;
-    }
-
-
     .buy-head .eyebrow{
-      color:
-        var(--yellow);
+      color:var(--yellow);
     }
 
 
@@ -1477,10 +1362,7 @@
       display:grid;
 
       grid-template-columns:
-        repeat(
-          4,
-          1fr
-        );
+        repeat(4,1fr);
 
       gap:18px;
 
@@ -1493,13 +1375,11 @@
 
       padding:28px;
 
-      border-radius:
-        var(--radius-lg);
+      border-radius:var(--radius-lg);
 
       background:white;
 
-      color:
-        var(--ink);
+      color:var(--ink);
 
       display:flex;
 
@@ -1510,16 +1390,14 @@
 
 
     .buy-card:hover{
-      transform:
-        translateY(-7px)
-        rotate(-1deg);
+      transform:translateY(-7px);
     }
 
 
     .buy-card h3{
       font-size:2rem;
 
-      letter-spacing:-.05em;
+      letter-spacing:-.04em;
     }
 
 
@@ -1539,18 +1417,16 @@
 
 
     .buy-card.bulk{
-      background:
-        var(--yellow);
+      background:var(--yellow);
     }
 
 
-    /* =========================
+    /* =====================================
        CONTACT
-    ========================= */
+    ===================================== */
 
     .contact{
-      background:
-        var(--cream);
+      background:var(--cream);
     }
 
 
@@ -1563,11 +1439,6 @@
       gap:70px;
 
       align-items:start;
-    }
-
-
-    .contact-details h2{
-      max-width:580px;
     }
 
 
@@ -1589,11 +1460,9 @@
 
       padding:35px;
 
-      border-radius:
-        var(--radius-xl);
+      border-radius:var(--radius-xl);
 
-      box-shadow:
-        var(--shadow);
+      box-shadow:var(--shadow);
 
       display:grid;
 
@@ -1607,8 +1476,7 @@
       width:100%;
 
       border:
-        2px solid
-        #eadfd2;
+        2px solid #eadfd2;
 
       padding:16px;
 
@@ -1623,8 +1491,7 @@
     .contact-form input:focus,
     .contact-form textarea:focus,
     .contact-form select:focus{
-      border-color:
-        var(--yellow);
+      border-color:var(--yellow);
     }
 
 
@@ -1635,13 +1502,12 @@
     }
 
 
-    /* =========================
+    /* =====================================
        FOOTER
-    ========================= */
+    ===================================== */
 
     footer{
-      background:
-        var(--ink);
+      background:var(--ink);
 
       color:white;
 
@@ -1679,8 +1545,7 @@
 
 
     footer h4{
-      color:
-        var(--yellow);
+      color:var(--yellow);
 
       margin-bottom:15px;
     }
@@ -1700,13 +1565,7 @@
       padding-top:24px;
 
       border-top:
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          .12
-        );
+        1px solid rgba(255,255,255,.12);
 
       color:#aa9e95;
 
@@ -1714,9 +1573,9 @@
     }
 
 
-    /* =========================
-       REVEALS
-    ========================= */
+    /* =====================================
+       SCROLL REVEALS
+    ===================================== */
 
     .reveal{
       opacity:0;
@@ -1737,16 +1596,11 @@
     }
 
 
-    /* =========================
+    /* =====================================
        TABLET
-    ========================= */
+    ===================================== */
 
     @media(max-width:1000px){
-
-      header{
-        top:34px;
-      }
-
 
       .nav-links{
         position:fixed;
@@ -1761,12 +1615,9 @@
 
         gap:26px;
 
-        background:
-          var(--cream);
+        background:var(--cream);
 
-        color:
-          var(--ink)
-          !important;
+        color:var(--ink) !important;
 
         font-size:1.5rem;
 
@@ -1785,24 +1636,16 @@
         position:relative;
 
         z-index:1003;
-      }
-
-
-      header.scrolled
-      .menu-toggle,
-
-      header:not(.scrolled)
-      .menu-toggle{
-        color:
-          var(--ink);
-
-        background:
-          var(--yellow);
 
         width:46px;
+
         height:46px;
 
         border-radius:50%;
+
+        color:var(--ink);
+
+        background:var(--yellow);
       }
 
 
@@ -1812,21 +1655,19 @@
 
 
       .hero{
-        min-height:92svh;
+        background-position:
+          62% center;
       }
 
 
-      .hero-inner{
-        padding-top:190px;
-      }
-
-
-      .hero-product-orbit{
-        opacity:.35;
-
-        width:65vw;
-
-        right:-15vw;
+      .hero-overlay{
+        background:
+          linear-gradient(
+            90deg,
+            rgba(13,7,3,.93) 0%,
+            rgba(13,7,3,.78) 48%,
+            rgba(13,7,3,.28) 100%
+          );
       }
 
 
@@ -1834,43 +1675,35 @@
       .story-grid,
       .nutrition-grid,
       .contact-grid{
-        grid-template-columns:
-          1fr;
+        grid-template-columns:1fr;
       }
 
 
       .flavor-card{
-        grid-template-columns:
-          1fr;
+        grid-template-columns:1fr;
 
-        min-height:auto;
+        gap:30px;
       }
 
 
-      .flavor-image{
+      .flavor-image-wrap{
         order:-1;
 
-        height:440px;
+        height:500px;
       }
 
 
       .size-grid,
       .process-grid{
         grid-template-columns:
-          repeat(
-            2,
-            1fr
-          );
+          repeat(2,1fr);
       }
 
 
       .quality-grid,
       .buy-grid{
         grid-template-columns:
-          repeat(
-            2,
-            1fr
-          );
+          repeat(2,1fr);
       }
 
 
@@ -1881,9 +1714,9 @@
     }
 
 
-    /* =========================
+    /* =====================================
        MOBILE
-    ========================= */
+    ===================================== */
 
     @media(max-width:640px){
 
@@ -1922,38 +1755,50 @@
       }
 
 
+      .hero{
+        min-height:94svh;
+
+        background-position:
+          67% center;
+      }
+
+
+      .hero-overlay{
+        background:
+          linear-gradient(
+            90deg,
+            rgba(13,7,3,.94) 0%,
+            rgba(13,7,3,.82) 56%,
+            rgba(13,7,3,.35) 100%
+          );
+      }
+
+
       .hero-inner{
         padding:
-          170px 0 65px;
+          170px 0 70px;
       }
 
 
       .hero h1{
         font-size:
           clamp(
-            3.6rem,
-            17vw,
-            5.6rem
+            3.5rem,
+            16vw,
+            5.4rem
           );
       }
 
 
       .hero-sub{
+        max-width:390px;
+
         font-size:1rem;
       }
 
 
       .hero-scroll{
         display:none;
-      }
-
-
-      .hero-product-orbit{
-        width:90vw;
-
-        right:-35vw;
-
-        opacity:.24;
       }
 
 
@@ -1969,6 +1814,7 @@
 
       .stamp{
         width:120px;
+
         height:120px;
 
         font-size:.9rem;
@@ -1976,14 +1822,26 @@
 
 
       .flavor-card{
-        padding:28px;
+        padding:25px;
 
         border-radius:28px;
       }
 
 
-      .flavor-image{
-        height:330px;
+      .flavor-image-wrap{
+        height:420px;
+
+        border-radius:22px;
+      }
+
+
+      .flavor-copy h3{
+        font-size:
+          clamp(
+            3rem,
+            15vw,
+            5rem
+          );
       }
 
 
@@ -1991,18 +1849,12 @@
       .process-grid,
       .quality-grid,
       .buy-grid{
-        grid-template-columns:
-          1fr;
+        grid-template-columns:1fr;
       }
 
 
       .size-card{
         min-height:430px;
-      }
-
-
-      .quality-card{
-        min-height:160px;
       }
 
 
@@ -2013,6 +1865,7 @@
 
       .year-badge{
         width:120px;
+
         height:120px;
 
         font-size:1.8rem;
@@ -2040,63 +1893,58 @@
 
 
       .footer-grid{
-        grid-template-columns:
-          1fr;
+        grid-template-columns:1fr;
       }
 
     }
 
 
-    @media(
-      prefers-reduced-motion:
-      reduce
-    ){
+    @media(prefers-reduced-motion:reduce){
 
       *,
       *::before,
       *::after{
-        animation-duration:
-          .01ms !important;
+        animation-duration:.01ms !important;
 
-        animation-iteration-count:
-          1 !important;
+        animation-iteration-count:1 !important;
 
-        scroll-behavior:
-          auto !important;
+        scroll-behavior:auto !important;
 
-        transition-duration:
-          .01ms !important;
+        transition-duration:.01ms !important;
       }
 
     }
 
   </style>
+
 </head>
 
 
 <body>
 
-  <!-- =========================
+
+  <!-- =====================================
        ANNOUNCEMENT
-  ========================== -->
+  ====================================== -->
 
   <div class="announcement">
     Proudly made in Cauayan City, Isabela since 1989
   </div>
 
 
-  <!-- =========================
+  <!-- =====================================
        NAVIGATION
-  ========================== -->
+  ====================================== -->
 
   <header id="header">
 
     <div class="container nav">
 
+
       <a href="#top">
 
         <img
-          src="assets/logo.jpg"
+          src="assets/logo.png"
           class="logo"
           alt="Big Brothers Corniks"
         >
@@ -2157,6 +2005,7 @@
         ☰
       </button>
 
+
     </div>
 
   </header>
@@ -2165,32 +2014,11 @@
   <main id="top">
 
 
-    <!-- =========================
-         VIDEO HERO
-    ========================== -->
+    <!-- =====================================
+         HERO
+    ====================================== -->
 
     <section class="hero">
-
-      <div class="hero-fallback"></div>
-
-
-      <video
-        class="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        poster="assets/550g-flavors-group.JPG"
-      >
-
-        <source
-          src="assets/hero-video.mp4"
-          type="video/mp4"
-        >
-
-      </video>
-
 
       <div class="hero-overlay"></div>
 
@@ -2208,6 +2036,7 @@
           <h1>
 
             Real Corn.
+
             <br>
 
             Real
@@ -2256,28 +2085,23 @@
 
           </div>
 
+
         </div>
 
       </div>
-
-
-      <img
-        src="assets/550g-flavors-group.JPG"
-        alt=""
-        class="hero-product-orbit"
-      >
 
 
       <div class="hero-scroll">
         Scroll for the crunch ↓
       </div>
 
+
     </section>
 
 
-    <!-- =========================
-         MARQUEE
-    ========================== -->
+    <!-- =====================================
+         TICKER
+    ====================================== -->
 
     <div class="ticker">
 
@@ -2309,11 +2133,12 @@
     </div>
 
 
-    <!-- =========================
+    <!-- =====================================
          INTRO
-    ========================== -->
+    ====================================== -->
 
     <section class="section intro">
+
 
       <div class="container intro-grid">
 
@@ -2327,10 +2152,7 @@
 
 
           <h2 class="section-title">
-
-            One seriously
-            satisfying crunch.
-
+            One seriously satisfying crunch.
           </h2>
 
 
@@ -2363,7 +2185,9 @@
           <div class="stamp">
 
             Since
+
             <br>
+
             1989
 
           </div>
@@ -2374,17 +2198,19 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          FLAVORS
-    ========================== -->
+    ====================================== -->
 
     <section
       class="section flavors"
       id="flavors"
     >
+
 
       <div class="container">
 
@@ -2403,7 +2229,9 @@
             <h2 class="section-title">
 
               Three ways
+
               <br>
+
               to crunch.
 
             </h2>
@@ -2426,9 +2254,11 @@
         <div class="flavor-stack">
 
 
-          <!-- CHEESE -->
+          <!-- CLASSIC CHEESE -->
 
-          <article class="flavor-card cheese reveal">
+          <article
+            class="flavor-card cheese reveal"
+          >
 
 
             <div class="flavor-word">
@@ -2447,7 +2277,9 @@
               <h3>
 
                 Classic
+
                 <br>
+
                 Cheese
 
               </h3>
@@ -2469,11 +2301,17 @@
             </div>
 
 
-            <img
-              src="assets/cheese-550g.JPG"
-              class="flavor-image"
-              alt="Big Brothers Corniks Classic Cheese"
-            >
+            <div class="flavor-image-wrap">
+
+
+              <img
+                src="assets/cheese.png"
+                class="flavor-image"
+                alt="Big Brothers Corniks Classic Cheese"
+              >
+
+
+            </div>
 
 
           </article>
@@ -2481,7 +2319,9 @@
 
           <!-- SPICY -->
 
-          <article class="flavor-card spicy reveal">
+          <article
+            class="flavor-card spicy reveal"
+          >
 
 
             <div class="flavor-word">
@@ -2498,9 +2338,7 @@
 
 
               <h3>
-
                 Spicy
-                
               </h3>
 
 
@@ -2521,11 +2359,17 @@
             </div>
 
 
-            <img
-              src="assets/spicy-550g.JPG"
-              class="flavor-image"
-              alt="Big Brothers Corniks Spicy"
-            >
+            <div class="flavor-image-wrap">
+
+
+              <img
+                src="assets/spicy.png"
+                class="flavor-image"
+                alt="Big Brothers Corniks Spicy"
+              >
+
+
+            </div>
 
 
           </article>
@@ -2533,7 +2377,9 @@
 
           <!-- GARLIC -->
 
-          <article class="flavor-card garlic reveal">
+          <article
+            class="flavor-card garlic reveal"
+          >
 
 
             <div class="flavor-word">
@@ -2552,7 +2398,9 @@
               <h3>
 
                 Garlic
+
                 <br>
+
                 With Chips
 
               </h3>
@@ -2574,11 +2422,17 @@
             </div>
 
 
-            <img
-              src="assets/garlic-550g.JPG"
-              class="flavor-image"
-              alt="Big Brothers Corniks Garlic with Chips"
-            >
+            <div class="flavor-image-wrap">
+
+
+              <img
+                src="assets/garlic.png"
+                class="flavor-image"
+                alt="Big Brothers Corniks Garlic with Chips"
+              >
+
+
+            </div>
 
 
           </article>
@@ -2589,17 +2443,19 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          SIZES
-    ========================== -->
+    ====================================== -->
 
     <section
       class="section sizes-section"
       id="sizes"
     >
+
 
       <div class="container">
 
@@ -2615,7 +2471,9 @@
           <h2 class="section-title">
 
             Little craving.
+
             <br>
+
             Big craving.
 
           </h2>
@@ -2707,17 +2565,19 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          STORY
-    ========================== -->
+    ====================================== -->
 
     <section
       class="section story"
       id="story"
     >
+
 
       <div class="container story-grid">
 
@@ -2735,7 +2595,9 @@
           <div class="year-badge">
 
             Since
+
             <br>
+
             1989
 
           </div>
@@ -2755,7 +2617,9 @@
           <h2 class="section-title">
 
             From Isabela
+
             <br>
+
             to every snack table.
 
           </h2>
@@ -2786,14 +2650,16 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          PROCESS
-    ========================== -->
+    ====================================== -->
 
     <section class="section process">
+
 
       <div class="container">
 
@@ -2809,7 +2675,9 @@
           <h2 class="section-title">
 
             Corn in.
+
             <br>
+
             Crunch out.
 
           </h2>
@@ -2928,17 +2796,19 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          NUTRITION
-    ========================== -->
+    ====================================== -->
 
     <section
       class="section nutrition"
       id="nutrition"
     >
+
 
       <div class="container">
 
@@ -2954,7 +2824,9 @@
           <h2 class="section-title">
 
             Nutrition
+
             <br>
+
             facts.
 
           </h2>
@@ -3099,45 +2971,6 @@
             <div class="nutrition-row">
 
               <strong>
-                Saturated Fat
-              </strong>
-
-              <span>
-                To be provided
-              </span>
-
-            </div>
-
-
-            <div class="nutrition-row">
-
-              <strong>
-                Trans Fat
-              </strong>
-
-              <span>
-                To be provided
-              </span>
-
-            </div>
-
-
-            <div class="nutrition-row">
-
-              <strong>
-                Cholesterol
-              </strong>
-
-              <span>
-                To be provided
-              </span>
-
-            </div>
-
-
-            <div class="nutrition-row">
-
-              <strong>
                 Sodium
               </strong>
 
@@ -3152,32 +2985,6 @@
 
               <strong>
                 Total Carbohydrates
-              </strong>
-
-              <span>
-                To be provided
-              </span>
-
-            </div>
-
-
-            <div class="nutrition-row">
-
-              <strong>
-                Dietary Fiber
-              </strong>
-
-              <span>
-                To be provided
-              </span>
-
-            </div>
-
-
-            <div class="nutrition-row">
-
-              <strong>
-                Total Sugars
               </strong>
 
               <span>
@@ -3221,17 +3028,19 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          QUALITY
-    ========================== -->
+    ====================================== -->
 
     <section
       class="section quality"
       id="quality"
     >
+
 
       <div class="container">
 
@@ -3247,7 +3056,9 @@
           <h2 class="section-title">
 
             Quality in
+
             <br>
+
             every crunch.
 
           </h2>
@@ -3368,17 +3179,19 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          WHERE TO BUY
-    ========================== -->
+    ====================================== -->
 
     <section
       class="section buy"
       id="buy"
     >
+
 
       <div class="container">
 
@@ -3394,7 +3207,9 @@
           <h2 class="section-title">
 
             Find us.
+
             <br>
+
             Snack happy.
 
           </h2>
@@ -3525,17 +3340,19 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          CONTACT
-    ========================== -->
+    ====================================== -->
 
     <section
       class="section contact"
       id="contact"
     >
+
 
       <div class="container contact-grid">
 
@@ -3551,9 +3368,13 @@
           <h2 class="section-title">
 
             Orders.
+
             <br>
+
             Resellers.
+
             <br>
+
             Partnerships.
 
           </h2>
@@ -3563,9 +3384,11 @@
 
 
             <div>
+
               <strong>
                 3 Sher's Food Products
               </strong>
+
             </div>
 
 
@@ -3618,9 +3441,7 @@
         </div>
 
 
-        <!-- =========================
-             FORMSPREE CONTACT FORM
-        ========================== -->
+        <!-- FORMSPREE -->
 
         <form
           class="contact-form reveal"
@@ -3652,6 +3473,7 @@
             required
           >
 
+
             <option
               value=""
               disabled
@@ -3660,35 +3482,31 @@
               Select inquiry type
             </option>
 
-            <option
-              value="General Inquiry"
-            >
+
+            <option value="General Inquiry">
               General Inquiry
             </option>
 
-            <option
-              value="Bulk Order"
-            >
+
+            <option value="Bulk Order">
               Bulk Order
             </option>
 
-            <option
-              value="Reseller Inquiry"
-            >
+
+            <option value="Reseller Inquiry">
               Reseller Inquiry
             </option>
 
-            <option
-              value="Distributor Inquiry"
-            >
+
+            <option value="Distributor Inquiry">
               Distributor Inquiry
             </option>
 
-            <option
-              value="Product Question"
-            >
+
+            <option value="Product Question">
               Product Question
             </option>
+
 
           </select>
 
@@ -3720,17 +3538,19 @@
 
       </div>
 
+
     </section>
 
 
   </main>
 
 
-  <!-- =========================
+  <!-- =====================================
        FOOTER
-  ========================== -->
+  ====================================== -->
 
   <footer>
+
 
     <div class="container">
 
@@ -3827,6 +3647,7 @@
       <div class="footer-bottom">
 
         ©
+
         <span id="year"></span>
 
         Big Brothers Corniks /
@@ -3839,54 +3660,45 @@
 
     </div>
 
+
   </footer>
 
 
   <script>
 
-    /* =========================
+
+    /* =====================================
        YEAR
-    ========================== */
+    ===================================== */
 
     document
-      .getElementById(
-        "year"
-      )
+      .getElementById("year")
       .textContent =
-      new Date()
-        .getFullYear();
+      new Date().getFullYear();
 
 
-    /* =========================
-       HEADER SCROLL
-    ========================== */
+
+    /* =====================================
+       HEADER
+    ===================================== */
 
     const header =
-      document
-        .getElementById(
-          "header"
-        );
+      document.getElementById("header");
 
 
     function updateHeader(){
 
-      if(
-        window.scrollY > 40
-      ){
+      if(window.scrollY > 40){
 
-        header
-          .classList
-          .add(
-            "scrolled"
-          );
+        header.classList.add(
+          "scrolled"
+        );
 
       }else{
 
-        header
-          .classList
-          .remove(
-            "scrolled"
-          );
+        header.classList.remove(
+          "scrolled"
+        );
 
       }
 
@@ -3896,78 +3708,57 @@
     updateHeader();
 
 
-    window
-      .addEventListener(
-
-        "scroll",
-
-        updateHeader,
-
-        {
-          passive:true
-        }
-
-      );
+    window.addEventListener(
+      "scroll",
+      updateHeader,
+      {
+        passive:true
+      }
+    );
 
 
-    /* =========================
+
+    /* =====================================
        MOBILE MENU
-    ========================== */
+    ===================================== */
 
     const menuToggle =
-      document
-        .getElementById(
-          "menuToggle"
-        );
+      document.getElementById(
+        "menuToggle"
+      );
 
 
     const navigation =
-      document
-        .getElementById(
-          "navigation"
+      document.getElementById(
+        "navigation"
+      );
+
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+
+        navigation.classList.toggle(
+          "open"
         );
 
 
-    menuToggle
-      .addEventListener(
-
-        "click",
-
-        () => {
+        document.body.classList.toggle(
+          "menu-open"
+        );
 
 
-          navigation
-            .classList
-            .toggle(
-              "open"
-            );
+        menuToggle.textContent =
+          navigation.classList.contains(
+            "open"
+          )
+          ? "✕"
+          : "☰";
 
 
-          document
-            .body
-            .classList
-            .toggle(
-              "menu-open"
-            );
-
-
-          menuToggle
-            .textContent =
-
-            navigation
-              .classList
-              .contains(
-                "open"
-              )
-
-            ? "✕"
-
-            : "☰";
-
-
-        }
-
-      );
+      }
+    );
 
 
     document
@@ -3975,57 +3766,45 @@
         "#navigation a"
       )
       .forEach(
-
         (link) => {
 
 
-          link
-            .addEventListener(
-
-              "click",
-
-              () => {
+          link.addEventListener(
+            "click",
+            () => {
 
 
-                navigation
-                  .classList
-                  .remove(
-                    "open"
-                  );
+              navigation.classList.remove(
+                "open"
+              );
 
 
-                document
-                  .body
-                  .classList
-                  .remove(
-                    "menu-open"
-                  );
+              document.body.classList.remove(
+                "menu-open"
+              );
 
 
-                menuToggle
-                  .textContent =
-                  "☰";
+              menuToggle.textContent =
+                "☰";
 
 
-              }
-
-            );
+            }
+          );
 
 
         }
-
       );
 
 
-    /* =========================
+
+    /* =====================================
        NUTRITION SELECTOR
-    ========================== */
+    ===================================== */
 
     function updateNutrition(){
 
 
       const flavor =
-
         document
           .getElementById(
             "flavorSelect"
@@ -4034,7 +3813,6 @@
 
 
       const size =
-
         document
           .getElementById(
             "sizeSelect"
@@ -4058,49 +3836,45 @@
     }
 
 
-    /* =========================
-       SCROLL REVEALS
-    ========================== */
+
+    /* =====================================
+       REVEAL ANIMATIONS
+    ===================================== */
 
     const revealObserver =
-
       new IntersectionObserver(
 
         (entries) => {
 
 
-          entries
-            .forEach(
-
-              (entry) => {
+          entries.forEach(
+            (entry) => {
 
 
-                if(
-                  entry
-                    .isIntersecting
-                ){
+              if(
+                entry.isIntersecting
+              ){
 
 
-                  entry
-                    .target
-                    .classList
-                    .add(
-                      "visible"
-                    );
+                entry
+                  .target
+                  .classList
+                  .add(
+                    "visible"
+                  );
 
 
-                  revealObserver
-                    .unobserve(
-                      entry.target
-                    );
-
-
-                }
+                revealObserver
+                  .unobserve(
+                    entry.target
+                  );
 
 
               }
 
-            );
+
+            }
+          );
 
 
         },
@@ -4117,76 +3891,15 @@
         ".reveal"
       )
       .forEach(
-
         (element) => {
 
 
-          revealObserver
-            .observe(
-              element
-            );
+          revealObserver.observe(
+            element
+          );
 
 
         }
-
-      );
-
-
-    /* =========================
-       LIGHT VIDEO PARALLAX
-    ========================== */
-
-    const heroVideo =
-
-      document
-        .querySelector(
-          ".hero-video"
-        );
-
-
-    window
-      .addEventListener(
-
-        "scroll",
-
-        () => {
-
-
-          if(
-            !heroVideo
-          ){
-            return;
-          }
-
-
-          const scroll =
-
-            Math.min(
-
-              window.scrollY,
-
-              window.innerHeight
-
-            );
-
-
-          heroVideo
-            .style
-            .transform =
-
-            "translateY("
-            +
-            scroll * .12
-            +
-            "px) scale(1.04)";
-
-
-        },
-
-        {
-          passive:true
-        }
-
       );
 
 
@@ -4194,4 +3907,5 @@
 
 
 </body>
+
 </html>
