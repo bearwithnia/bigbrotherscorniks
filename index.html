@@ -25,9 +25,6 @@
     Proudly made in Cauayan City, Isabela since 1989
   </div>
 
-
-  <!-- NAV -->
-
   <header id="header">
 
     <div class="container nav">
@@ -41,6 +38,7 @@
       </a>
 
       <nav class="nav-links" id="navigation">
+
         <a href="#story">Our Story</a>
         <a href="#flavors">Flavors</a>
         <a href="#sizes">Sizes</a>
@@ -48,6 +46,7 @@
         <a href="#quality">Quality</a>
         <a href="#buy">Where to Buy</a>
         <a href="#contact">Contact</a>
+
       </nav>
 
       <a href="#buy" class="btn nav-cta">
@@ -66,7 +65,6 @@
     </div>
 
   </header>
-
 
   <main id="top">
 
@@ -117,74 +115,89 @@
       </div>
 
       <div class="hero-scroll">
-        Scroll for the crunch ↓
+        Scroll ↓
       </div>
 
     </section>
 
+    <!-- CLICK-THROUGH STORY -->
 
-    <!-- ANIMATED STORY -->
+    <section class="story-click" id="story">
 
-    <section class="story-scroll" id="story">
+      <div
+        class="story-background-word"
+        id="storyBackgroundWord"
+      >
+        1989
+      </div>
 
-      <div class="story-stage">
+      <div class="container story-click-inner">
 
-        <div class="story-background-word" id="storyYear">
-          1989
-        </div>
+        <div class="story-copy">
 
-        <div class="story-progress">
-          <span id="storyProgress"></span>
-        </div>
+          <div
+            class="story-chapter"
+            id="storyChapter"
+          >
+            Chapter 01
+          </div>
 
-        <div class="container story-stage-inner">
+          <h2 id="storyHeadline">
+            It started in Isabela.
+          </h2>
 
-          <div class="story-animated-copy">
+          <p id="storyDescription">
+            3 Sher's Food Products began in 1989 as a family-owned
+            food business in San Fermin, Cauayan City, Isabela.
+          </p>
 
-            <div class="story-chapter" id="storyChapter">
-              Chapter 01
-            </div>
+          <div class="story-controls">
 
-            <h2 id="storyHeadline">
-              It started in Isabela.
-            </h2>
+            <button
+              class="story-btn"
+              id="storyPrev"
+              type="button"
+            >
+              ← Previous
+            </button>
 
-            <p id="storyDescription">
-              3 Sher's Food Products began in 1989 as a family-owned
-              food business in San Fermin, Cauayan City, Isabela.
-            </p>
+            <div
+              class="story-dots"
+              id="storyDots"
+            ></div>
+
+            <button
+              class="story-btn story-btn-next"
+              id="storyNext"
+              type="button"
+            >
+              Next →
+            </button>
 
           </div>
 
-          <div class="story-animated-visual">
+        </div>
 
-            <div class="story-image-frame">
+        <div class="story-visual">
 
-              <img
-                src="assets/cheese-all-sizes.JPG"
-                id="storyImage"
-                alt="Big Brothers Corniks story"
-              >
+          <div
+            class="story-image-frame map-frame"
+            id="storyImageFrame"
+          >
 
-            </div>
+            <img
+              src="assets/isabela-map.png"
+              id="storyImage"
+              alt="Map of the Philippines highlighting Isabela"
+            >
 
           </div>
 
-        </div>
-
-        <div class="story-scroll-hint">
-          Keep scrolling ↓
         </div>
 
       </div>
 
-      <div class="story-scroll-step" data-story-step="0"></div>
-      <div class="story-scroll-step" data-story-step="1"></div>
-      <div class="story-scroll-step" data-story-step="2"></div>
-      <div class="story-scroll-step" data-story-step="3"></div>
-
     </section>
-
 
     <!-- TICKER -->
 
@@ -211,7 +224,6 @@
       </div>
 
     </div>
-
 
     <!-- FLAVORS -->
 
@@ -240,10 +252,7 @@
 
         </div>
 
-
         <div class="flavor-stack">
-
-          <!-- CHEESE -->
 
           <article class="flavor-card cheese reveal">
 
@@ -284,9 +293,6 @@
 
           </article>
 
-
-          <!-- SPICY -->
-
           <article class="flavor-card spicy reveal">
 
             <div class="flavor-word">
@@ -326,9 +332,6 @@
             </div>
 
           </article>
-
-
-          <!-- GARLIC -->
 
           <article class="flavor-card garlic reveal">
 
@@ -375,7 +378,6 @@
 
     </section>
 
-
     <!-- SIZES -->
 
     <section class="section sizes-section" id="sizes">
@@ -393,7 +395,6 @@
           </h2>
 
         </div>
-
 
         <div class="size-grid">
 
@@ -413,7 +414,6 @@
 
           </article>
 
-
           <article class="size-card reveal">
 
             <img
@@ -429,7 +429,6 @@
             </p>
 
           </article>
-
 
           <article class="size-card reveal">
 
@@ -453,7 +452,6 @@
 
     </section>
 
-
     <!-- PROCESS -->
 
     <section class="section process">
@@ -471,7 +469,6 @@
           </h2>
 
         </div>
-
 
         <div class="process-grid">
 
@@ -517,7 +514,6 @@
 
     </section>
 
-
     <!-- NUTRITION -->
 
     <section class="section nutrition" id="nutrition">
@@ -535,7 +531,6 @@
           </h2>
 
         </div>
-
 
         <div class="nutrition-grid">
 
@@ -558,7 +553,6 @@
               <option>Garlic with Chips</option>
             </select>
 
-
             <label for="sizeSelect">
               Size
             </label>
@@ -572,7 +566,6 @@
               <option>550 g</option>
             </select>
 
-
             <p class="selector-note">
               Verified nutrition information can be added
               once the back-label details for each flavor
@@ -580,7 +573,6 @@
             </p>
 
           </div>
-
 
           <div class="nutrition-panel reveal">
 
@@ -638,7 +630,6 @@
 
     </section>
 
-
     <!-- QUALITY -->
 
     <section class="section quality" id="quality">
@@ -656,7 +647,6 @@
           </h2>
 
         </div>
-
 
         <div class="quality-grid">
 
@@ -706,7 +696,6 @@
 
     </section>
 
-
     <!-- BUY -->
 
     <section class="section buy" id="buy">
@@ -724,7 +713,6 @@
           </h2>
 
         </div>
-
 
         <div class="buy-grid">
 
@@ -748,7 +736,6 @@
 
           </article>
 
-
           <article class="buy-card reveal">
 
             <h3>Shopee</h3>
@@ -769,7 +756,6 @@
 
           </article>
 
-
           <article class="buy-card reveal">
 
             <h3>Lazada</h3>
@@ -789,7 +775,6 @@
             </a>
 
           </article>
-
 
           <article class="buy-card bulk reveal">
 
@@ -813,7 +798,6 @@
       </div>
 
     </section>
-
 
     <!-- CONTACT -->
 
@@ -871,7 +855,6 @@
 
         </div>
 
-
         <form
           class="contact-form reveal"
           action="https://formspree.io/f/mrpzynqn"
@@ -889,7 +872,6 @@
             </h3>
 
           </div>
-
 
           <div class="form-row">
 
@@ -910,7 +892,6 @@
             >
 
           </div>
-
 
           <select name="inquiry" required>
 
@@ -940,20 +921,17 @@
 
           </select>
 
-
           <textarea
             name="message"
             placeholder="Tell us how we can help..."
             required
           ></textarea>
 
-
           <input
             type="hidden"
             name="_subject"
             value="New Big Brothers Corniks Website Inquiry"
           >
-
 
           <button
             type="submit"
@@ -969,9 +947,6 @@
     </section>
 
   </main>
-
-
-  <!-- FOOTER -->
 
   <footer>
 
@@ -994,7 +969,6 @@
 
         </div>
 
-
         <div>
 
           <h4>Explore</h4>
@@ -1007,7 +981,6 @@
 
         </div>
 
-
         <div>
 
           <h4>Flavors</h4>
@@ -1019,7 +992,6 @@
         </div>
 
       </div>
-
 
       <div class="footer-bottom">
 
@@ -1035,7 +1007,6 @@
     </div>
 
   </footer>
-
 
   <script src="script.js"></script>
 
