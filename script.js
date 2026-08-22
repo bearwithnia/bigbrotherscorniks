@@ -1,10 +1,14 @@
-/* YEAR */
+/* =========================
+   YEAR
+========================= */
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 const header =
   document.getElementById("header");
@@ -37,11 +41,12 @@ window.addEventListener(
 );
 
 
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 const menuToggle =
   document.getElementById("menuToggle");
-
 
 const navigation =
   document.getElementById("navigation");
@@ -84,7 +89,9 @@ document
   });
 
 
-/* NUTRITION */
+/* =========================
+   NUTRITION
+========================= */
 
 function updateNutrition(){
 
@@ -100,7 +107,15 @@ function updateNutrition(){
 }
 
 
-/* REVEAL */
+/* =========================
+   REVEAL ANIMATIONS
+========================= */
+
+const revealItems =
+  document.querySelectorAll(
+    ".reveal, .process-card"
+  );
+
 
 const revealObserver =
   new IntersectionObserver(
@@ -109,13 +124,36 @@ const revealObserver =
 
       entries.forEach((entry) => {
 
-        if(entry.isIntersecting){
-
-          entry.target.classList.add("visible");
-
-          revealObserver.unobserve(entry.target);
-
+        if(!entry.isIntersecting){
+          return;
         }
+
+
+        const element =
+          entry.target;
+
+
+        const siblings =
+          [...element.parentElement.children];
+
+
+        const index =
+          siblings.indexOf(element);
+
+
+        element.style.transitionDelay =
+          Math.min(index * 80, 320)
+          + "ms";
+
+
+        element.classList.add(
+          "visible"
+        );
+
+
+        revealObserver.unobserve(
+          element
+        );
 
       });
 
@@ -128,54 +166,45 @@ const revealObserver =
   );
 
 
-document
-  .querySelectorAll(".reveal")
-  .forEach((element) => {
+revealItems.forEach(
+  (item) => {
 
-    revealObserver.observe(element);
+    revealObserver.observe(item);
 
-  });
+  }
+);
 
 
 /* =========================
-   CLICK-THROUGH STORY
+   STORY
 ========================= */
 
 const storySection =
   document.querySelector(".story-click");
 
-
 const storyBackgroundWord =
   document.getElementById("storyBackgroundWord");
-
 
 const storyChapter =
   document.getElementById("storyChapter");
 
-
 const storyHeadline =
   document.getElementById("storyHeadline");
-
 
 const storyDescription =
   document.getElementById("storyDescription");
 
-
 const storyImage =
   document.getElementById("storyImage");
-
 
 const storyImageFrame =
   document.getElementById("storyImageFrame");
 
-
 const storyPrev =
   document.getElementById("storyPrev");
 
-
 const storyNext =
   document.getElementById("storyNext");
-
 
 const storyDots =
   document.getElementById("storyDots");
@@ -237,55 +266,90 @@ let storyTimer = null;
 
 function createStoryDots(){
 
-  storyData.forEach((item,index) => {
+  storyData.forEach(
+    (item,index) => {
 
-    const dot =
-      document.createElement("button");
-
-
-    dot.className =
-      "story-dot";
-
-
-    dot.type =
-      "button";
+      const dot =
+        document.createElement(
+          "button"
+        );
 
 
-    dot.setAttribute(
-      "aria-label",
-      `Go to story chapter ${index + 1}`
-    );
+      dot.className =
+        "story-dot";
 
 
-    dot.addEventListener(
-      "click",
-      () => {
-
-        showStory(index);
-
-      }
-    );
+      dot.type =
+        "button";
 
 
-    storyDots.appendChild(dot);
+      dot.setAttribute(
+        "aria-label",
+        `Go to story chapter ${index + 1}`
+      );
 
-  });
+
+      dot.addEventListener(
+        "click",
+        () => {
+
+          showStory(index);
+
+        }
+      );
+
+
+      storyDots.appendChild(dot);
+
+    }
+  );
 
 }
 
 
-function updateDots(){
+function updateStoryDots(){
 
   document
     .querySelectorAll(".story-dot")
-    .forEach((dot,index) => {
+    .forEach(
+      (dot,index) => {
 
-      dot.classList.toggle(
-        "active",
-        index === currentStoryIndex
-      );
+        dot.classList.toggle(
+          "active",
+          index === currentStoryIndex
+        );
 
-    });
+      }
+    );
+
+}
+
+
+function restartStoryImageAnimation(){
+
+  storyImage.animate(
+
+    [
+      {
+        opacity:0,
+        transform:
+          "translateX(25px) scale(.96)"
+      },
+
+      {
+        opacity:1,
+        transform:
+          "translateX(0) scale(1)"
+      }
+    ],
+
+    {
+      duration:650,
+      easing:
+        "cubic-bezier(.16,1,.3,1)"
+    }
+
+  );
 
 }
 
@@ -301,7 +365,9 @@ function showStory(index){
   }
 
 
-  clearTimeout(storyTimer);
+  clearTimeout(
+    storyTimer
+  );
 
 
   currentStoryIndex =
@@ -318,73 +384,84 @@ function showStory(index){
 
 
   storyTimer =
-    setTimeout(() => {
+    setTimeout(
+      () => {
 
-      storyBackgroundWord.textContent =
-        item.bgWord;
-
-
-      storyChapter.textContent =
-        item.chapter;
+        storyBackgroundWord.textContent =
+          item.bgWord;
 
 
-      storyHeadline.textContent =
-        item.headline;
+        storyChapter.textContent =
+          item.chapter;
 
 
-      storyDescription.textContent =
-        item.description;
+        storyHeadline.textContent =
+          item.headline;
 
 
-      storyImage.src =
-        item.image;
+        storyDescription.textContent =
+          item.description;
 
 
-      storyImage.alt =
-        item.headline;
+        storyImage.src =
+          item.image;
 
 
-      storyImageFrame.className =
-        "story-image-frame " +
-        item.imageClass;
+        storyImage.alt =
+          item.headline;
 
 
-      storySection.style.backgroundColor =
-        item.color;
+        storyImageFrame.className =
+          "story-image-frame " +
+          item.imageClass;
 
 
-      storyPrev.disabled =
-        index === 0;
+        storySection.style.backgroundColor =
+          item.color;
 
 
-      if(
-        index ===
-        storyData.length - 1
-      ){
-
-        storyNext.textContent =
-          "Explore Flavors →";
-
-      }else{
-
-        storyNext.textContent =
-          "Next →";
-
-      }
+        storyPrev.disabled =
+          index === 0;
 
 
-      updateDots();
+        if(
+          index ===
+          storyData.length - 1
+        ){
+
+          storyNext.textContent =
+            "Explore Flavors →";
+
+        }else{
+
+          storyNext.textContent =
+            "Next →";
+
+        }
 
 
-      requestAnimationFrame(() => {
+        updateStoryDots();
 
-        storySection.classList.remove(
-          "is-changing"
+
+        requestAnimationFrame(
+          () => {
+
+            storySection
+              .classList
+              .remove(
+                "is-changing"
+              );
+
+
+            restartStoryImageAnimation();
+
+          }
         );
 
-      });
+      },
 
-    },260);
+      260
+    );
 
 }
 
@@ -431,7 +508,59 @@ storyNext.addEventListener(
 
 createStoryDots();
 
-updateDots();
+updateStoryDots();
 
 storyPrev.disabled =
   true;
+
+
+/* =========================
+   SUBTLE HERO PARALLAX
+========================= */
+
+const hero =
+  document.querySelector(".hero");
+
+
+window.addEventListener(
+  "scroll",
+  () => {
+
+    if(!hero){
+      return;
+    }
+
+
+    if(
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches
+    ){
+      return;
+    }
+
+
+    const scrollY =
+      window.scrollY;
+
+
+    if(
+      scrollY <=
+      window.innerHeight
+    ){
+
+      const offset =
+        scrollY * .04;
+
+
+      hero.style.backgroundPosition =
+        `center calc(50% + ${offset}px)`;
+
+    }
+
+  },
+
+  {
+    passive:true
+  }
+);
